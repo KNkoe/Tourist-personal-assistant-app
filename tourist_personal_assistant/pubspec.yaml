@@ -63,6 +63,35 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/Caves/Kome caves/
+    - assets/images/Caves/Liphofung caves/
+    - assets/images/Caves/Malimong caves/
+    - assets/images/Caves/Masitise Cave house and museum/
+
+    - assets/images/Dams/Katse dam/
+    - assets/images/Dams/Metolong dam/
+    - assets/images/Dams/Mohale dam/
+    - assets/images/Dams/Muela dam/
+    - assets/images/Dams/Pulihali dam/
+
+    - assets/images/Mines/Kao mine/
+    - assets/images/Mines/Letseng diamonds mine/
+    - assets/images/Mines/Liqhobong mine/
+    - assets/images/Mines/Mothae mine/
+
+    - assets/images/Mountains/Afriski mountain resort/
+    - assets/images/Mountains/Mafadi/
+    - assets/images/Mountains/Qiloane/
+    - assets/images/Mountains/Thaba putsoa/
+    - assets/images/Mountains/Thabana li mmele/
+    - assets/images/Mountains/Thabana Ntlenyane/  
+
+    - assets/images/National Parks/Sehlabathebe/
+    - assets/images/National Parks/Tsehlanyane/
+
+    - assets/images/Water falls/Botsoela water fall/
+    - assets/images/Water falls/Ketane falls/
+    - assets/images/Water falls/Maletsonyane falls/
+    - assets/images/Water falls/Ribaneng falls/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

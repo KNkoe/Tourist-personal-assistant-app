@@ -5,4 +5,6 @@ final lightTheme = ThemeData(
     primaryColor: const Color(0xff0089EF),
     appBarTheme: const AppBarTheme(
         titleTextStyle: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)));
+            color: Color(0xff0089EF),
+            fontWeight: FontWeight.bold,
+            fontSize: 18)));

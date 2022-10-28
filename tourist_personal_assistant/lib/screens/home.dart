@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_personal_assistant/widgets/responsive.dart';
 import 'package:animations/animations.dart';
+import 'package:tourist_personal_assistant/screens/destinations/national_parks.dart';
+import 'package:tourist_personal_assistant/screens/destinations/water_falls.dart';
+
+import '../models/destination.dart';
+import '../widgets/responsive.dart';
+import 'destinations/caves.dart';
+import 'destinations/dams.dart';
+import 'destinations/mines.dart';
+import 'destinations/mountains.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -23,6 +31,25 @@ class _MyHomePageState extends State<MyHomePage> {
     "Water falls",
     "Mines"
   ];
+
+  List<Destination> tabs(int index) {
+    switch (index) {
+      case 0:
+        return caves;
+      case 1:
+        return dams;
+      case 2:
+        return mountains;
+      case 3:
+        return nationalParks;
+      case 4:
+        return waterFalls;
+      case 5:
+        return mines;
+      default:
+        return [];
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,15 +100,18 @@ class _MyHomePageState extends State<MyHomePage> {
               children: destinations
                   .map((destination) => GestureDetector(
                         onTap: () {
-                          setState(() {
-                            selectedTabIndex =
-                                destinations.indexOf(destination);
-                          });
-                          if (destinations.indexOf(destination) > 2) {
+                          if (destinations.indexOf(destination) > 2 &&
+                              selectedTabIndex <
+                                  destinations.indexOf(destination)) {
                             _scrollController.animateTo(200,
                                 duration: const Duration(seconds: 1),
                                 curve: Curves.ease);
                           }
+
+                          setState(() {
+                            selectedTabIndex =
+                                destinations.indexOf(destination);
+                          });
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
@@ -116,95 +146,175 @@ class _MyHomePageState extends State<MyHomePage> {
             controller: ScrollController(keepScrollOffset: false),
             physics: const BouncingScrollPhysics(),
             crossAxisCount: 2,
-            children: [
-              Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                width: screenSize(context).width * 0.4,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Theme.of(context).scaffoldBackgroundColor,
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 30,
-                          spreadRadius: 0,
-                          offset: const Offset(0, 1))
-                    ]),
-                child: OpenContainer(
-                  closedElevation: 0,
-                  closedColor: Colors.transparent,
-                  closedBuilder: (context, action) => Column(
-                    children: [
-                      Container(
-                        height: 110,
-                        width: 140,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: const DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage(
-                                    "assets/images/Caves/Kome caves/cover.jpg"))),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text(
-                              "Kome Caves",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "4.3",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: const [
-                                Icon(Icons.location_on, color: Colors.black45),
-                                SizedBox(
-                                  width: 5,
+            children: tabs(selectedTabIndex)
+                .map((destination) => Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      width: screenSize(context).width * 0.4,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Theme.of(context).scaffoldBackgroundColor,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 30,
+                                spreadRadius: 0,
+                                offset: const Offset(0, 1))
+                          ]),
+                      child: OpenContainer(
+                          closedElevation: 0,
+                          middleColor: Colors.white,
+                          closedColor: Colors.transparent,
+                          closedBuilder: (context, action) => Column(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image(
+                                        height: 110,
+                                        width: 140,
+                                        fit: BoxFit.cover,
+                                        image: ResizeImage(
+                                            AssetImage(destination.coverUrl!),
+                                            height: 110,
+                                            width: 140)),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(5),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          destination.title!,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: const TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 5),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            const Icon(Icons.location_on,
+                                                color: Colors.black45),
+                                            const SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              destination.district!,
+                                              style: const TextStyle(
+                                                  color: Colors.black45),
+                                            ),
+                                          ],
+                                        ),
+                                        IconButton(
+                                          onPressed: () {},
+                                          icon: const Icon(
+                                            Icons.favorite_outline,
+                                            size: 18,
+                                            color: Colors.black45,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  ElevatedButton.icon(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.directions),
+                                      label: const Text('Directions'))
+                                ],
+                              ),
+                          openBuilder: (context, action) => Scaffold(
+                                body: NestedScrollView(
+                                    headerSliverBuilder: ((context,
+                                            innerBoxIsScrolled) =>
+                                        [
+                                          SliverAppBar(
+                                            elevation: 0,
+                                            leading: GestureDetector(
+                                              onTap: () =>
+                                                  Navigator.of(context).pop(),
+                                              child: Container(
+                                                  padding:
+                                                      const EdgeInsets.all(2),
+                                                  margin:
+                                                      const EdgeInsets.all(10),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          shape:
+                                                              BoxShape.circle,
+                                                          color: Colors.white),
+                                                  child: Icon(
+                                                    Icons.arrow_back,
+                                                    color: Theme.of(context)
+                                                        .primaryColor,
+                                                  )),
+                                            ),
+                                            expandedHeight:
+                                                screenSize(context).height *
+                                                    0.5,
+                                            floating: false,
+                                            pinned: true,
+                                            flexibleSpace: FlexibleSpaceBar(
+                                              expandedTitleScale: 1.6,
+                                              centerTitle: true,
+                                              title: Text(
+                                                destination.title!
+                                                    .toUpperCase(),
+                                                style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 18,
+                                                    letterSpacing: 1.8),
+                                              ),
+                                              background: ShaderMask(
+                                                shaderCallback: (rect) {
+                                                  return const LinearGradient(
+                                                    begin: Alignment.topCenter,
+                                                    end: Alignment.bottomCenter,
+                                                    colors: [
+                                                      Colors.black,
+                                                      Colors.white12
+                                                    ],
+                                                  ).createShader(Rect.fromLTRB(
+                                                      0,
+                                                      0,
+                                                      rect.width,
+                                                      rect.height + 200));
+                                                },
+                                                blendMode: BlendMode.dstIn,
+                                                child: Image(
+                                                    fit: BoxFit.fill,
+                                                    image: AssetImage(
+                                                        destination.imgUrl!)),
+                                              ),
+                                            ),
+                                          )
+                                        ]),
+                                    body: Text(destination.description!)),
+                                bottomNavigationBar: Container(
+                                  padding: const EdgeInsets.all(20),
+                                  child: ElevatedButton.icon(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                          fixedSize: const Size(100, 50)),
+                                      icon: const Icon(Icons.directions),
+                                      label: const Text("Directions")),
                                 ),
-                                Text(
-                                  "Berea",
-                                  style: TextStyle(color: Colors.black45),
-                                ),
-                              ],
-                            ),
-                            const Icon(
-                              Icons.star_border,
-                              size: 18,
-                              color: Colors.black45,
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      ElevatedButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(Icons.directions),
-                          label: const Text('Directions'))
-                    ],
-                  ),
-                  openBuilder: (context, action) => Container(),
-                ),
-              )
-            ],
+                              )),
+                    ))
+                .toList(),
           ))
         ],
       ),
