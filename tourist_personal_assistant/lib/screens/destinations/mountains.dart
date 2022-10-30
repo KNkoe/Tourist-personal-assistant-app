@@ -1,4 +1,4 @@
-import 'package:tourist_personal_assistant/models/destination.dart';
+import '../../models/destination.dart';
 
 List<Destination> mountains = [
   Destination(
