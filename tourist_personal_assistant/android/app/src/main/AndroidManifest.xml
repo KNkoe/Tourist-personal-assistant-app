@@ -4,6 +4,7 @@
         android:label="tourist_personal_assistant"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,5 +31,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDbeModnNnTR5TZxpxwUutN1Fxo0c0wogg"/>
+        
     </application>
 </manifest>

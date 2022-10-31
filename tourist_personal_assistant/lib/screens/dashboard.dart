@@ -1,6 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:tourist_personal_assistant/screens/widgets/details.dart';
+import 'package:tourist_personal_assistant/screens/widgets/mapview.dart';
 
 import '../models/destination.dart';
 import '../widgets/responsive.dart';
@@ -20,6 +22,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   final ScrollController _scrollController = ScrollController();
+  final PageController _pageController = PageController();
 
   int selectedTabIndex = 0;
 
@@ -141,239 +144,141 @@ class _DashboardState extends State<Dashboard> {
             height: 20,
           ),
           Expanded(
-              child: GridView.count(
-            childAspectRatio: 0.7,
-            controller: ScrollController(keepScrollOffset: false),
+              child: PageView(
             physics: const BouncingScrollPhysics(),
-            crossAxisCount: 2,
-            children: tabs(selectedTabIndex)
-                .map((destination) => Animate(
-                      effects: const [
-                        FadeEffect(),
-                        SlideEffect(duration: Duration(milliseconds: 200))
-                      ],
-                      child: Container(
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 10),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 10),
-                        width: screenSize(context).width * 0.4,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Theme.of(context).scaffoldBackgroundColor,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 10,
-                                  spreadRadius: 0,
-                                  offset: const Offset(0, 1))
-                            ]),
-                        child: OpenContainer(
-                            closedElevation: 0,
-                            middleColor: Colors.white,
-                            closedColor: Colors.transparent,
-                            closedBuilder: (context, action) => Column(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(15),
-                                      child: Image(
-                                          height: 110,
-                                          width: 140,
-                                          fit: BoxFit.cover,
-                                          image: ResizeImage(
-                                              AssetImage(destination.coverUrl!),
-                                              height: 110,
-                                              width: 140)),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            destination.title!,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: const TextStyle(
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          right: 5, bottom: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Row(
+            controller: _pageController,
+            onPageChanged: ((value) => setState(() {
+                  selectedTabIndex = value;
+                })),
+            children: destinations
+                .map((e) => GridView.count(
+                      childAspectRatio: 0.7,
+                      controller: ScrollController(keepScrollOffset: false),
+                      physics: const BouncingScrollPhysics(),
+                      crossAxisCount: 2,
+                      children: tabs(selectedTabIndex)
+                          .map((destination) => Animate(
+                                effects: const [
+                                  FadeEffect(),
+                                  SlideEffect(
+                                      duration: Duration(milliseconds: 200))
+                                ],
+                                child: Container(
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 20, vertical: 10),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 10),
+                                  width: screenSize(context).width * 0.4,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: Theme.of(context)
+                                          .scaffoldBackgroundColor,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color:
+                                                Colors.black.withOpacity(0.1),
+                                            blurRadius: 10,
+                                            spreadRadius: 0,
+                                            offset: const Offset(0, 1))
+                                      ]),
+                                  child: OpenContainer(
+                                      closedElevation: 0,
+                                      middleColor: Colors.white,
+                                      closedColor: Colors.transparent,
+                                      closedBuilder: (context, action) =>
+                                          Column(
                                             children: [
-                                              const Icon(Icons.location_on,
-                                                  color: Colors.black45),
+                                              ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                child: Image(
+                                                    height: 110,
+                                                    width: 140,
+                                                    fit: BoxFit.cover,
+                                                    image: ResizeImage(
+                                                        AssetImage(destination
+                                                            .coverUrl!),
+                                                        height: 110,
+                                                        width: 140)),
+                                              ),
                                               const SizedBox(
-                                                width: 5,
+                                                height: 10,
                                               ),
-                                              Text(
-                                                destination.district!,
-                                                style: const TextStyle(
-                                                    color: Colors.black45),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      destination.title!,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      style: const TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                            ],
-                                          ),
-                                          const Icon(
-                                            Icons.favorite_outline,
-                                            size: 18,
-                                            color: Colors.black45,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    ElevatedButton.icon(
-                                        onPressed: () {},
-                                        icon: const Icon(Icons.directions),
-                                        label: const Text('Directions'))
-                                  ],
-                                ),
-                            openBuilder: (context, action) => Scaffold(
-                                  body: NestedScrollView(
-                                      headerSliverBuilder: ((context,
-                                              innerBoxIsScrolled) =>
-                                          [
-                                            SliverAppBar(
-                                              elevation: 0,
-                                              leading: GestureDetector(
-                                                onTap: () =>
-                                                    Navigator.of(context).pop(),
-                                                child: Container(
-                                                    padding:
-                                                        const EdgeInsets.all(2),
-                                                    margin:
-                                                        const EdgeInsets.all(
-                                                            10),
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                            shape:
-                                                                BoxShape.circle,
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 5, bottom: 10),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        const Icon(
+                                                            Icons.location_on,
                                                             color:
-                                                                Colors.white),
-                                                    child: Icon(
-                                                      Icons.arrow_back,
-                                                      color: Theme.of(context)
-                                                          .primaryColor,
-                                                    )),
-                                              ),
-                                              expandedHeight:
-                                                  screenSize(context).height *
-                                                      0.45,
-                                              floating: false,
-                                              pinned: true,
-                                              flexibleSpace: FlexibleSpaceBar(
-                                                expandedTitleScale: 1.6,
-                                                centerTitle: true,
-                                                titlePadding:
-                                                    const EdgeInsets.all(20),
-                                                title: Text(
-                                                  destination.title!
-                                                      .toUpperCase(),
-                                                  style: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 14,
-                                                      letterSpacing: 1.8),
-                                                ),
-                                                background: ShaderMask(
-                                                  shaderCallback: (rect) {
-                                                    return const LinearGradient(
-                                                      begin:
-                                                          Alignment.topCenter,
-                                                      end: Alignment
-                                                          .bottomCenter,
-                                                      colors: [
-                                                        Colors.black,
-                                                        Colors.white12
+                                                                Colors.black45),
+                                                        const SizedBox(
+                                                          width: 5,
+                                                        ),
+                                                        Text(
+                                                          destination.district!,
+                                                          style:
+                                                              const TextStyle(
+                                                                  color: Colors
+                                                                      .black45),
+                                                        ),
                                                       ],
-                                                    ).createShader(
-                                                        Rect.fromLTRB(
-                                                            0,
-                                                            0,
-                                                            rect.width,
-                                                            rect.height + 200));
-                                                  },
-                                                  blendMode: BlendMode.dstIn,
-                                                  child: Image(
-                                                      fit: BoxFit.fill,
-                                                      image: AssetImage(
-                                                          destination.imgUrl!)),
+                                                    ),
+                                                    const Icon(
+                                                      Icons.favorite_outline,
+                                                      size: 18,
+                                                      color: Colors.black45,
+                                                    )
+                                                  ],
                                                 ),
                                               ),
-                                            )
-                                          ]),
-                                      body: SingleChildScrollView(
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(20),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              const SizedBox(
-                                                height: 40,
-                                              ),
-                                              Row(
-                                                children: [
-                                                  const Icon(
-                                                    Icons.location_on,
-                                                    color: Colors.black38,
-                                                  ),
-                                                  const SizedBox(
-                                                    width: 10,
-                                                  ),
-                                                  Text(
-                                                    destination.district!,
-                                                    style: const TextStyle(
-                                                        color: Colors.black38,
-                                                        fontSize: 16),
-                                                  ),
-                                                ],
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              Text(
-                                                destination.description!,
-                                                style: const TextStyle(
-                                                    fontSize: 18,
-                                                    color: Colors.black54),
-                                              )
+                                              ElevatedButton.icon(
+                                                  onPressed: () {
+                                                    Navigator.of(context)
+                                                        .push(MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const MapView(),
+                                                    ));
+                                                  },
+                                                  icon: const Icon(
+                                                      Icons.directions),
+                                                  label:
+                                                      const Text('Directions'))
                                             ],
                                           ),
-                                        ),
-                                      )),
-                                  floatingActionButtonLocation:
-                                      FloatingActionButtonLocation
-                                          .miniEndDocked,
-                                  floatingActionButton: FloatingActionButton(
-                                    onPressed: () {},
-                                    child: const Icon(Icons.favorite_outline),
-                                  ),
-                                  persistentFooterAlignment:
-                                      AlignmentDirectional.center,
-                                  persistentFooterButtons: [
-                                    ElevatedButton.icon(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.directions),
-                                      label: const Text("Directions"),
-                                    )
-                                  ],
-                                )),
-                      ),
+                                      openBuilder: (context, action) =>
+                                          DestinationDetails(
+                                              destination: destination)),
+                                ),
+                              ))
+                          .toList(),
                     ))
                 .toList(),
           ))
