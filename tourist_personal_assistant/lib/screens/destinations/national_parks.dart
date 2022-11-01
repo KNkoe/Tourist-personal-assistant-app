@@ -6,11 +6,13 @@ List<Destination> nationalParks = [
       description: "",
       district: "Berea",
       coverUrl: "assets/images/National Parks/Sehlabathebe/cover.jpg",
-      imgUrl: "assets/images/National Parks/Sehlabathebe/img.jpg"),
+      imgUrl: "assets/images/National Parks/Sehlabathebe/img.jpg",
+      tag: "national park"),
   Destination(
       title: "Tsehlanyane",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/National Parks/Tsehlanyane/cover.jpeg",
-      imgUrl: "assets/images/National Parks/Tsehlanyane/img.jpg"),
+      imgUrl: "assets/images/National Parks/Tsehlanyane/img.jpg",
+      tag: "national park"),
 ];

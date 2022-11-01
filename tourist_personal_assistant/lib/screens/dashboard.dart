@@ -2,7 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:tourist_personal_assistant/screens/widgets/details.dart';
-import 'package:tourist_personal_assistant/screens/widgets/mapview.dart';
+import 'package:tourist_personal_assistant/screens/widgets/map.dart';
 
 import '../models/destination.dart';
 import '../widgets/responsive.dart';
@@ -264,7 +264,10 @@ class _DashboardState extends State<Dashboard> {
                                                     Navigator.of(context)
                                                         .push(MaterialPageRoute(
                                                       builder: (context) =>
-                                                          const MapView(),
+                                                          MyMap(
+                                                        destination:
+                                                            destination,
+                                                      ),
                                                     ));
                                                   },
                                                   icon: const Icon(

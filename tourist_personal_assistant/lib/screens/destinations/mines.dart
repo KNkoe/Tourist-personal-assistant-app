@@ -6,23 +6,27 @@ List<Destination> mines = [
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mines/Kao mine/cover.jpg",
-      imgUrl: "assets/images/Mines/Kao mine/img.jpg"),
+      imgUrl: "assets/images/Mines/Kao mine/img.jpg",
+      tag: "mine"),
   Destination(
       title: "Letseng diamonds",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mines/Letseng diamonds mine/cover.jpg",
-      imgUrl: "assets/images/Mines/Letseng diamonds mine/img.jpg"),
+      imgUrl: "assets/images/Mines/Letseng diamonds mine/img.jpg",
+      tag: "mine"),
   Destination(
       title: "Liqhobong",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mines/Liqhobong mine/cover.jpg",
-      imgUrl: "assets/images/Mines/Liqhobong mine/img.jpg"),
+      imgUrl: "assets/images/Mines/Liqhobong mine/img.jpg",
+      tag: "mine"),
   Destination(
       title: "Mothae",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mines/Mothae mine/cover.jpg",
-      imgUrl: "assets/images/Mines/Mothae mine/img.jpg")
+      imgUrl: "assets/images/Mines/Mothae mine/img.jpg",
+      tag: "mine")
 ];

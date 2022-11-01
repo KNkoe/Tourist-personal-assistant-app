@@ -6,35 +6,41 @@ List<Destination> mountains = [
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Afriski mountain resort/cover.jpeg",
-      imgUrl: "assets/images/Mountains/Afriski mountain resort/img.jpg"),
+      imgUrl: "assets/images/Mountains/Afriski mountain resort/img.jpg",
+      tag: "mountain"),
   Destination(
       title: "Mafali",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Mafadi/cover.jpg",
-      imgUrl: "assets/images/Mountains/Mafadi/img.jpg"),
+      imgUrl: "assets/images/Mountains/Mafadi/img.jpg",
+      tag: "mountain"),
   Destination(
       title: "Qiloane",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Qiloane/cover.jpg",
-      imgUrl: "assets/images/Mountains/Qiloane/img.jpg"),
+      imgUrl: "assets/images/Mountains/Qiloane/img.jpg",
+      tag: "mountain"),
   Destination(
       title: "Thaba putsoa",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Thaba putsoa/cover.jpg",
-      imgUrl: "assets/images/Mountains/Thaba putsoa/img.jpg"),
+      imgUrl: "assets/images/Mountains/Thaba putsoa/img.jpg",
+      tag: "mountain"),
   Destination(
       title: "Thabana li mmele",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Thabana li mmele/cover.jpeg",
-      imgUrl: "assets/images/Mountains/Thabana li mmele/img.jpg"),
+      imgUrl: "assets/images/Mountains/Thabana li mmele/img.jpg",
+      tag: "mountain"),
   Destination(
       title: "Thabana Ntlenyane",
       description: "",
       district: "Berea",
       coverUrl: "assets/images/Mountains/Thabana Ntlenyane/cover.jpeg",
-      imgUrl: "assets/images/Mountains/Thabana Ntlenyane/img.jpg")
+      imgUrl: "assets/images/Mountains/Thabana Ntlenyane/img.jpg",
+      tag: "mountain")
 ];
