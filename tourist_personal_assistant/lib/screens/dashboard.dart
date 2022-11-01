@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:tourist_personal_assistant/screens/widgets/details.dart';
 import 'package:tourist_personal_assistant/screens/widgets/map.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 import '../models/destination.dart';
 import '../widgets/responsive.dart';
@@ -23,6 +24,14 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   final ScrollController _scrollController = ScrollController();
   final PageController _pageController = PageController();
+
+  Future<bool> _checkConnection() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      return true;
+    }
+    return false;
+  }
 
   int selectedTabIndex = 0;
 
@@ -261,14 +270,27 @@ class _DashboardState extends State<Dashboard> {
                                               ),
                                               ElevatedButton.icon(
                                                   onPressed: () {
-                                                    Navigator.of(context)
-                                                        .push(MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          MyMap(
-                                                        destination:
-                                                            destination,
-                                                      ),
-                                                    ));
+                                                    _checkConnection()
+                                                        .then((connect) {
+                                                      if (connect) {
+                                                        Navigator.of(context)
+                                                            .push(
+                                                                MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              MyMap(
+                                                            destination:
+                                                                destination,
+                                                          ),
+                                                        ));
+                                                      } else {
+                                                        ScaffoldMessenger.of(
+                                                                context)
+                                                            .showSnackBar(
+                                                                const SnackBar(
+                                                                    content: Text(
+                                                                        "Please check that you are connected to the internet")));
+                                                      }
+                                                    });
                                                   },
                                                   icon: const Icon(
                                                       Icons.directions),

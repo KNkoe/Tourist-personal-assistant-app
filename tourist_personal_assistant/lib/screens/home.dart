@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tourist_personal_assistant/screens/explore.dart';
-import 'package:tourist_personal_assistant/screens/favourites.dart';
 import 'package:tourist_personal_assistant/screens/settings.dart';
 
 import 'dashboard.dart';
@@ -22,8 +21,6 @@ class _MyHomePageState extends State<MyHomePage> {
       case 1:
         return const Explore();
       case 2:
-        return const Favourites();
-      case 3:
         return const Settings();
       default:
         return Container();
@@ -63,6 +60,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     ? Theme.of(context).primaryColor
                     : Colors.black26,
                 icon: const Icon(Icons.explore)),
+            // IconButton(
+            //     onPressed: () {
+            //       setState(() {
+            //         selectedNavBarIndex = 2;
+            //       });
+            //     },
+            //     color: selectedNavBarIndex == 2
+            //         ? Theme.of(context).primaryColor
+            //         : Colors.black26,
+            //     icon: const Icon(Icons.favorite)),
             IconButton(
                 onPressed: () {
                   setState(() {
@@ -72,17 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: selectedNavBarIndex == 2
                     ? Theme.of(context).primaryColor
                     : Colors.black26,
-                icon: const Icon(Icons.favorite)),
-            IconButton(
-                onPressed: () {
-                  setState(() {
-                    selectedNavBarIndex = 3;
-                  });
-                },
-                color: selectedNavBarIndex == 3
-                    ? Theme.of(context).primaryColor
-                    : Colors.black26,
-                icon: const Icon(Icons.person))
+                icon: const Icon(Icons.settings))
           ],
         ),
       ),

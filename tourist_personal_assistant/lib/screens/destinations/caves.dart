@@ -19,15 +19,17 @@ List<Destination> caves = [
       tag: "cave"),
   Destination(
       title: "Malimong",
-      description: "",
+      description:
+          "Malimong cave is affectionately known for being the home Ratsokoane who was the fastest Cannibal. The cannibals lived in these caves in Malimong.  This caves are also found in Berea district like Kome Caves.  Blue mountain Inn hotel is still the best option for accommodation. ",
       district: "Berea",
       coverUrl: "assets/images/Caves/Malimong caves/cover.jpeg",
       imgUrl: "assets/images/Caves/Malimong caves/img.jpeg",
       tag: "cave"),
   Destination(
       title: "Masitise",
-      description: "",
-      district: "Berea",
+      description:
+          "This cave is located in Quthing district. Masitise Cave house was built in 1866-1867 by Rev. David Ellenberger a missionary Society. It is a three roomed Cave, Rev. David stayed there with his family. It Is 5 kilometers away from Quthing town.\n\nActivities \n\n1. Rook paintings\n2. Museum\n3. Dinosaur footprints\n4. artifacts\n\nPlaces near Masitise Cave house and Museum:\n\nAccommodation places near Masitise Cave house and Museum include Hotel Mount Maluti which is a 3.5-star hotel with outdoor pool and restaurant. The hotel has a bar/lounge, it has fitness center, an outdoor tennis court and beautiful gardens. Another nearby place is Monateng Lodge ",
+      district: "Quthing",
       coverUrl: "assets/images/Caves/Masitise Cave house and museum/cover.jpg",
       imgUrl: "assets/images/Caves/Masitise Cave house and museum/img.jpeg",
       tag: "cave"),
