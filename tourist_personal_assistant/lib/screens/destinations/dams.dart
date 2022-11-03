@@ -27,15 +27,17 @@ List<Destination> dams = [
       tag: "dam"),
   Destination(
       title: "Muela",
-      description: "",
+      description:
+          "Muela dam is located in butha buthe district, it Is double curvature concrete arch dam built on sandstone. The dam has an ogee spillway and cascade stilling basin for energy dissipation. There is an inlet to the 38-km tunnel in the dam basin, through which water is delivered to south Africa.",
       district: "Berea",
       coverUrl: "assets/images/Dams/Muela dam/cover.jpg",
       imgUrl: "assets/images/Dams/Muela dam/img.jpg",
       tag: "dam"),
   Destination(
       title: "Pulihali",
-      description: "",
-      district: "Berea",
+      description:
+          "The construction of this dam is still on going. It is located in Mokhotlong district. It is said to be the second big dam in Lesotho.",
+      district: "Mokhotlong",
       coverUrl: "assets/images/Dams/Pulihali dam/cover.jpg",
       imgUrl: "assets/images/Dams/Pulihali dam/img.jpg",
       tag: "dam"),

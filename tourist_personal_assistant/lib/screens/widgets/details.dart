@@ -1,7 +1,9 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:tourist_personal_assistant/models/destination.dart';
 
 import '../../widgets/responsive.dart';
+import 'map.dart';
 
 class DestinationDetails extends StatefulWidget {
   const DestinationDetails({super.key, required this.destination});
@@ -13,6 +15,14 @@ class DestinationDetails extends StatefulWidget {
 }
 
 class _DestinationDetailsState extends State<DestinationDetails> {
+  Future<bool> _checkConnection() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      return true;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,15 +110,24 @@ class _DestinationDetailsState extends State<DestinationDetails> {
               ),
             ),
           )),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.favorite_outline),
-      ),
       persistentFooterAlignment: AlignmentDirectional.center,
       persistentFooterButtons: [
-        ElevatedButton.icon(
-          onPressed: () {},
+        FloatingActionButton.extended(
+          onPressed: () {
+            _checkConnection().then((connect) {
+              if (connect) {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => MyMap(
+                    destination: widget.destination,
+                  ),
+                ));
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text(
+                        "Please check that you are connected to the internet")));
+              }
+            });
+          },
           icon: const Icon(Icons.directions),
           label: const Text("Directions"),
         )
