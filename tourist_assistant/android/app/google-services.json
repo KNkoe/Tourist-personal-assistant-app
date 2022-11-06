@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384351935935",
+    "project_id": "tourist-personal-assistant",
+    "storage_bucket": "tourist-personal-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384351935935:android:15b1610c719133dc05150a",
+        "android_client_info": {
+          "package_name": "com.example.tourist_assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384351935935-3fqceei89bgos1lgpi7nngmd5s2m79rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMKOO1L8b99uTOO7fWB2VOOMdoIoQnIEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384351935935-3fqceei89bgos1lgpi7nngmd5s2m79rh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
