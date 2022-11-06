@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">384351935935-3fqceei89bgos1lgpi7nngmd5s2m79rh.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">384351935935</string>
+    <string name="google_api_key" translatable="false">AIzaSyAMKOO1L8b99uTOO7fWB2VOOMdoIoQnIEA</string>
+    <string name="google_app_id" translatable="false">1:384351935935:android:15b1610c719133dc05150a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAMKOO1L8b99uTOO7fWB2VOOMdoIoQnIEA</string>
+    <string name="google_storage_bucket" translatable="false">tourist-personal-assistant.appspot.com</string>
+    <string name="project_id" translatable="false">tourist-personal-assistant</string>
+</resources>

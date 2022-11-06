@@ -1,0 +1,4 @@
+#Sun Nov 06 14:00:26 SAST 2022
+base.0=/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -1,0 +1,338 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tourist_assistant"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="20"
+8-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:4:5-79
+11-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:5:5-67
+12-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-68
+13-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-65
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
+14-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-79
+14-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-76
+15    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+15-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-77
+15-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:13:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-77
+16-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-74
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
+17-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:22-79
+18
+19    <uses-feature
+19-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+20        android:glEsVersion="0x00020000"
+20-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+21        android:required="true" />
+21-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+22
+23    <queries>
+23-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
+24
+25        <!-- Needs to be explicitly declared on Android R+ -->
+26        <package android:name="com.google.android.apps.maps" />
+26-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
+26-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+27    </queries>
+28
+29    <application
+30        android:name="android.app.Application"
+30-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:9:9-42
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.8.0] /home/kadd/.gradle/caches/transforms-3/005627934cb5de51d804cd3c597f8200/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+32        android:icon="@mipmap/ic_launcher"
+32-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:10:9-43
+33        android:label="Tourist Personal Assistant" >
+33-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:8:9-51
+34        <activity
+34-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:11:9-31:20
+35            android:name="com.example.tourist_assistant.MainActivity"
+35-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:12:13-41
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:16:13-163
+37            android:exported="true"
+37-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:13:13-36
+38            android:hardwareAccelerated="true"
+38-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:17:13-47
+39            android:launchMode="singleTop"
+39-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:14:13-43
+40            android:theme="@style/LaunchTheme"
+40-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:15:13-47
+41            android:windowSoftInputMode="adjustResize" >
+41-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:18:13-55
+42
+43            <!--
+44                 Specifies an Android theme to apply to this Activity as soon as
+45                 the Android process has started. This theme is visible to the user
+46                 while the Flutter UI initializes. After that, this theme continues
+47                 to determine the Window background behind the Flutter UI.
+48            -->
+49            <meta-data
+49-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:23:13-26:15
+50                android:name="io.flutter.embedding.android.NormalTheme"
+50-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:24:17-72
+51                android:resource="@style/NormalTheme" />
+51-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:25:17-54
+52
+53            <intent-filter>
+53-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:27:13-30:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:28:17-69
+54-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:28:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:29:17-77
+56-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:29:27-74
+57            </intent-filter>
+58        </activity>
+59        <!--
+60             Don't delete the meta-data below.
+61             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+62        -->
+63        <meta-data
+63-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:34:9-36:33
+64            android:name="flutterEmbedding"
+64-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:35:13-44
+65            android:value="2" />
+65-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:36:13-30
+66        <meta-data
+66-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:37:9-38:71
+67            android:name="com.google.android.geo.API_KEY"
+67-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:37:20-65
+68            android:value="AIzaSyDbeModnNnTR5TZxpxwUutN1Fxo0c0wogg" />
+68-->/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/android/app/src/main/AndroidManifest.xml:38:13-68
+69
+70        <service
+70-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-19:72
+71            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+71-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-107
+72            android:exported="false"
+72-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-37
+73            android:permission="android.permission.BIND_JOB_SERVICE" />
+73-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-69
+74        <service
+74-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:20:9-26:19
+75            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+75-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-97
+76            android:exported="false" >
+76-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-37
+77            <intent-filter>
+77-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-25:29
+78                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+78-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:24:17-78
+78-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:24:25-75
+79            </intent-filter>
+80        </service>
+81
+82        <receiver
+82-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:28:9-35:20
+83            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+83-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:29:13-98
+84            android:exported="true"
+84-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:30:13-36
+85            android:permission="com.google.android.c2dm.permission.SEND" >
+85-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:31:13-73
+86            <intent-filter>
+86-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:32:13-34:29
+87                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+87-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:33:17-81
+87-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:33:25-78
+88            </intent-filter>
+89        </receiver>
+90
+91        <service
+91-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:37:9-41:19
+92            android:name="com.google.firebase.components.ComponentDiscoveryService"
+92-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:37:18-89
+93            android:directBootAware="true"
+93-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:34:13-43
+94            android:exported="false" >
+94-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:31:13-37
+95            <meta-data
+95-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:38:13-40:85
+96                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+96-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:39:17-128
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:40:17-82
+98            <meta-data
+98-->[:firebase_core] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+99                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+99-->[:firebase_core] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[:firebase_core] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+102                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+102-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-iid:21.1.0] /home/kadd/.gradle/caches/transforms-3/2c8fd9b068f47c2305add24377b6833a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+104            <meta-data
+104-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:55:13-57:85
+105                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+105-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:56:17-119
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:57:17-82
+107            <meta-data
+107-->[com.google.firebase:firebase-installations:17.1.0] /home/kadd/.gradle/caches/transforms-3/aaac5498cd61c53403dde464793af6fe/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:17:13-19:85
+108                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+108-->[com.google.firebase:firebase-installations:17.1.0] /home/kadd/.gradle/caches/transforms-3/aaac5498cd61c53403dde464793af6fe/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:18:17-127
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.firebase:firebase-installations:17.1.0] /home/kadd/.gradle/caches/transforms-3/aaac5498cd61c53403dde464793af6fe/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:19:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-datatransport:18.1.7] /home/kadd/.gradle/caches/transforms-3/6d3d61abd70335c3b3635bb7c10c06d9/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+111                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+111-->[com.google.firebase:firebase-datatransport:18.1.7] /home/kadd/.gradle/caches/transforms-3/6d3d61abd70335c3b3635bb7c10c06d9/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-datatransport:18.1.7] /home/kadd/.gradle/caches/transforms-3/6d3d61abd70335c3b3635bb7c10c06d9/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+113        </service>
+114
+115        <provider
+115-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:43:9-47:38
+116            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+116-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:44:13-102
+117            android:authorities="com.example.tourist_assistant.flutterfirebasemessaginginitprovider"
+117-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:45:13-88
+118            android:exported="false"
+118-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:46:13-37
+119            android:initOrder="99" />
+119-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:47:13-35
+120
+121        <service
+121-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:9-16:56
+122            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+122-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-77
+123            android:enabled="true"
+123-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-35
+124            android:exported="false"
+124-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-37
+125            android:foregroundServiceType="location" />
+125-->[:geolocator_android] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:13-53
+126
+127        <uses-library
+127-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+128            android:name="androidx.window.extensions"
+128-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+129            android:required="false" />
+129-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+130        <uses-library
+130-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+131            android:name="androidx.window.sidecar"
+131-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+132            android:required="false" />
+132-->[androidx.window:window:1.0.0-beta04] /home/kadd/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+133
+134        <receiver
+134-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:31:9-38:20
+135            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+135-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:32:13-78
+136            android:exported="true"
+136-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:33:13-36
+137            android:permission="com.google.android.c2dm.permission.SEND" >
+137-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:34:13-73
+138            <intent-filter>
+138-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:32:13-34:29
+139                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+139-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:33:17-81
+139-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:33:25-78
+140            </intent-filter>
+141        </receiver>
+142        <!--
+143             FirebaseMessagingService performs security checks at runtime,
+144             but set to not exported to explicitly avoid allowing another app to call it.
+145        -->
+146        <service
+146-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:44:9-51:19
+147            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+147-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:45:13-82
+148            android:directBootAware="true"
+148-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:46:13-43
+149            android:exported="false" >
+149-->[com.google.firebase:firebase-messaging:23.1.0] /home/kadd/.gradle/caches/transforms-3/569774cee7cd719185752e1c4ec8676a/transformed/jetified-firebase-messaging-23.1.0/AndroidManifest.xml:47:13-37
+150            <intent-filter android:priority="-500" >
+150-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-25:29
+151                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+151-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:24:17-78
+151-->[:firebase_messaging] /media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/firebase_messaging/intermediates/merged_manifest/release/AndroidManifest.xml:24:25-75
+152            </intent-filter>
+153        </service>
+154
+155        <provider
+155-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
+156            android:name="com.google.firebase.provider.FirebaseInitProvider"
+156-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+157            android:authorities="com.example.tourist_assistant.firebaseinitprovider"
+157-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
+158            android:directBootAware="true"
+158-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
+159            android:exported="false"
+159-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
+160            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+160-->[com.google.firebase:firebase-common:20.2.0] /home/kadd/.gradle/caches/transforms-3/ef8423601b72496d12bca9ac87595f67/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
+161        <uses-library
+161-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+162            android:name="org.apache.http.legacy"
+162-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+163            android:required="false" />
+163-->[com.google.android.gms:play-services-maps:18.1.0] /home/kadd/.gradle/caches/transforms-3/2d343665ade3289abaa799768a8e9f4d/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+164
+165        <activity
+165-->[com.google.android.gms:play-services-base:18.0.1] /home/kadd/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+166            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+166-->[com.google.android.gms:play-services-base:18.0.1] /home/kadd/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+167            android:exported="false"
+167-->[com.google.android.gms:play-services-base:18.0.1] /home/kadd/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+168            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+168-->[com.google.android.gms:play-services-base:18.0.1] /home/kadd/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+169
+170        <meta-data
+170-->[com.google.android.gms:play-services-basement:18.1.0] /home/kadd/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+171            android:name="com.google.android.gms.version"
+171-->[com.google.android.gms:play-services-basement:18.1.0] /home/kadd/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+172            android:value="@integer/google_play_services_version" />
+172-->[com.google.android.gms:play-services-basement:18.1.0] /home/kadd/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+173
+174        <service
+174-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+175            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+175-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+176            android:exported="false" >
+176-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+177            <meta-data
+177-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+178                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+178-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+179                android:value="cct" />
+179-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /home/kadd/.gradle/caches/transforms-3/61fd35e3738ef55dd6374ee6a68cae63/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+180        </service>
+181        <service
+181-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+182            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+182-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+183            android:exported="false"
+183-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+184            android:permission="android.permission.BIND_JOB_SERVICE" >
+184-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+185        </service>
+186
+187        <receiver
+187-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+188            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+188-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+189            android:exported="false" />
+189-->[com.google.android.datatransport:transport-runtime:3.1.8] /home/kadd/.gradle/caches/transforms-3/978a2af69b997e29759906459292b13f/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+190    </application>
+191
+192</manifest>
