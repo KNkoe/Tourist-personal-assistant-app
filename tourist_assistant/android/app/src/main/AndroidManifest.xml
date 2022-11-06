@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:label="tourist_assistant"
+        android:label="Tourist Personal Assistant"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
