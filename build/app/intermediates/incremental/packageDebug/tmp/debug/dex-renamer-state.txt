@@ -1,4 +1,0 @@
-#Sun Nov 06 13:51:55 SAST 2022
-base.0=/media/kadd/Media/Freelacing/Final Year Projects/Khathatso/Tourist-personal-assistant-app/tourist_assistant/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
